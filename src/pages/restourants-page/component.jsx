@@ -1,5 +1,5 @@
 import React from 'react'
-import { RestaurantsItems } from '../../components/restaurants-items/component';
+import { RestaurantTabs } from '../../components/restaurant-tabs/component';
 import { Restaraunts } from '../../components/restaurants/component';
 
 export const RestaurantsPage = ({ restaurants }) => {
@@ -7,12 +7,12 @@ export const RestaurantsPage = ({ restaurants }) => {
   
     return (
       <div>
-        <RestaurantsItems
+        <RestaurantTabs
           restaurants={restaurantsList}
           onCategorySelect={(restaurant) => console.log(restaurant)}
         />
 
-        <Restaraunts restaurantsElems={restaurants} />
+        <Restaraunts restaurants={restaurants} />
       </div>
     );
   };

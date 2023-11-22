@@ -1,11 +1,11 @@
 import React from 'react'
 import { Restaurant } from '../restaurant/component'
 
-export const Restaraunts = ({restaurantsElems}) => {
+export const Restaraunts = ({restaurants}) => {
   return (
     <div>
-      {restaurantsElems.map((elem) => (
-        <Restaurant elem={elem}></Restaurant>
+      {restaurants.map((elem) => (
+        <Restaurant key={elem.name} elem={elem}></Restaurant>
       ))}
     </div>
     

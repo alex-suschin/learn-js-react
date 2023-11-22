@@ -1,4 +1,6 @@
 import React from 'react'
+import { Dish } from '../dish/component'
+import { Review } from '../review/component'
 
 export const Restaurant = ({elem}) => {
   return (
@@ -6,27 +8,17 @@ export const Restaurant = ({elem}) => {
       <h2>{elem.name}</h2>
       <h3>Меню:</h3>
       {
-        elem.menu.map((dish) => {
-          return <div key={dish.name}>
-            <h4>Блюдо: {dish.name}</h4>
-            <h5>Состав: {
-                dish.ingredients.map((el) => {
-                  return <span>{el + " "}</span>
-                })
-              }</h5>
-            <h4>Цена: {dish.price}</h4>
-            </div>
+        elem.menu.map((dish, idx) => {
+          return <Dish key={idx} dish={dish} />
         })
       }
       <h4>Отзывы:</h4>
       {
-        elem.reviews.map((rewiew) => {
-          return <div key={rewiew.id}>
-            <h4>Имя: {rewiew.user}</h4>
-            <p>{rewiew.text}</p>
-            </div>
+        elem.reviews.map((rewiew, idx) => {
+          return <Review key={idx} rewiew={rewiew} />
         })
       }
+      <hr />
     </div>
   )
 }
