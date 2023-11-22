@@ -1,7 +1,7 @@
 import React from 'react'
 import { Restaurant } from '../restaurant/component'
 
-export const Restaraunts = ({restaurants}) => {
+export const Restaraunts = ({restaurants, activeRestaurant}) => {
   return (
     <div>
       {restaurants.map((elem) => (
