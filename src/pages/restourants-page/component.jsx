@@ -1,32 +1,19 @@
 import React, { useState } from 'react'
 import { RestaurantTabs } from '../../components/restaurant-tabs/component';
-import { Restaraunts } from '../../components/restaurants/component';
+import { Restaurant } from '../../components/restaurant/component';
 
 export const RestaurantsPage = ({ restaurants }) => {
-    const [activeRestaurant, setActiveRestaurant] = useState('');
-    const restaurantsList = Array.from(new Set(restaurants.map(({ name }) => name)));
+    const [activeRestaurantIndex, setActiveRestaurantIndex] = useState(0);
+    const activeRestaurant = restaurants[activeRestaurantIndex];
 
-    const checkActiveRestaurant = (e) => {
-      setActiveRestaurant(e);
-    }
-
-    const filteredRestaurants = restaurants.filter(
-      ({ name }) =>
-        name === activeRestaurant
-    );
-
-    console.log('activeRestaurant', activeRestaurant);
-  
     return (
       <div>
         <RestaurantTabs
-          checkActiveRestaurant={checkActiveRestaurant}
-          restaurants={restaurantsList}
-          activeRestaurant={activeRestaurant}
-          onCategorySelect={(restaurant) => console.log(restaurant)}
+          restaurants={restaurants}
+          onTabClick={setActiveRestaurantIndex}
         />
 
-        <Restaraunts restaurants={filteredRestaurants} activeRestaurant={activeRestaurant} />
+        {activeRestaurant && <Restaurant restaurant={activeRestaurant} />}
       </div>
     );
   };

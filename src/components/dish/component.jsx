@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
+import { Counter } from '../counter/component';
 
 export const Dish = ({dish}) => {
 
-  const [col, setCol] = useState(0);
+  const [amount, setAmount] = useState(0);
 
   let plus = () => {
-    setCol(col+1);
+    setAmount(amount + 1);
   }
 
   let minus = () => {
-    setCol(col-1);
+    setAmount(amount - 1);
   }
   
   return (
@@ -21,11 +22,7 @@ export const Dish = ({dish}) => {
             ))
             }</h5>
         <h4>Цена: {dish.price}</h4>
-        <div>
-          <button onClick={minus}>-</button>
-          <input type="text" placeholder='Кол-во' defaultValue="0" value={col} min={0} max={5} />
-          <button onClick={plus}>+</button>
-        </div>
+        <Counter value={amount} increment={plus} decrement={minus} />
         <br />
     </div>
   )

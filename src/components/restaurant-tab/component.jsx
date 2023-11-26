@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const RestaurantTab = ({title, checkActiveRestaurant}) => {
+export const RestaurantTab = ({title, onClick }) => {
   return (
-    <button onClick={checkActiveRestaurant}>{title}</button>
+    <button onClick={onClick }>{title}</button>
   )
 }
