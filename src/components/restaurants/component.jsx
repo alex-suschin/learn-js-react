@@ -4,8 +4,8 @@ import { Restaurant } from '../restaurant/component'
 export const Restaraunts = ({restaurants}) => {
   return (
     <div>
-      {restaurants.map((elem) => (
-        <Restaurant key={elem.name} elem={elem}></Restaurant>
+      {restaurants.map((restaurant) => (
+        <Restaurant key={restaurant.name} restaurant={restaurant} />
       ))}
     </div>
     
