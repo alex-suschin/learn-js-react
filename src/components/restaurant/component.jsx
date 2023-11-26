@@ -1,6 +1,7 @@
 import React from 'react'
 import { Dish } from '../dish/component'
 import { Review } from '../review/component'
+import FormReveiew from '../form-reveiw/component'
 
 export const Restaurant = ({restaurant}) => {
   return (
@@ -18,6 +19,7 @@ export const Restaurant = ({restaurant}) => {
           return <Review key={idx} rewiew={rewiew} />
         })
       }
+      <FormReveiew />
       <hr />
     </div>
   )
