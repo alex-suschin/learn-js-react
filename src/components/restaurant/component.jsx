@@ -3,7 +3,7 @@ import { Dish } from '../dish/component'
 import { Review } from '../review/component'
 import FormReveiew from '../form-reveiw/component'
 
-export const Restaurant = ({restaurant}) => {
+export const Restaurant = ({ restaurant }) => {
   return (
     <div>
       <h2>{restaurant.name}</h2>
@@ -19,6 +19,7 @@ export const Restaurant = ({restaurant}) => {
           return <Review key={idx} rewiew={rewiew} />
         })
       }
+      <h4>Оставить отзыв:</h4>
       <FormReveiew />
       <hr />
     </div>
