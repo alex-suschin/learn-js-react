@@ -1,11 +1,13 @@
 import React from 'react'
 import { RestaurantTab } from '../restaurant-tab/component'
+import styles from './styles.module.scss'
 
-export const RestaurantTabs = ({restaurants, onTabClick}) => {
+export const RestaurantTabs = ({ activeRestaurant, restaurants, onTabClick }) => {
     return (
-        <div>
-            {restaurants.map(({name}, index) => (
-                <RestaurantTab key={name} title={name} onClick={() => onTabClick(index)} />
+
+        <div className={styles.restaurantTabs}>
+            {restaurants.map(({ name }, index) => (
+                <RestaurantTab activeRestaurant={activeRestaurant} key={name} title={name} onClick={() => onTabClick(index)} />
             ))}
         </div>
     )
