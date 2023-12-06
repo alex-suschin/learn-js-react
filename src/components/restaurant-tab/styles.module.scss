@@ -1,0 +1,9 @@
+.tab {
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+
+    &.tabActive {
+        box-shadow: 0px 0px 5px 5px rgb(0 135 10 / 82%);
+    }
+}

@@ -1,7 +1,10 @@
 import React from 'react'
+import styles from './styles.module.scss'
 
 export const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
+	return (
+		<footer>
+			<div>GetFood©</div>
+		</footer>
+	)
 }

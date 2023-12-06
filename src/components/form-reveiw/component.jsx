@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react'
 import { Counter } from '../counter/component';
+import styles from './styles.module.scss'
 
 const DEFAULT_FORM_VALUE = {
     name: "",
@@ -26,19 +27,17 @@ const FormReveiew = () => {
     const [formVaue, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
 
     return (
-        <div className='form-rating'>
-            <div>
-                <label htmlFor="name">Name</label><br />
+        <div className={styles.formRating}>
+            <div className={styles.formRatingItem}>
+                <label htmlFor="name">Name</label>
                 <input id="name" type="text" value={formVaue.name} onChange={(e) => dispatch({ type: "setName", payload: e.target.value })} />
             </div>
-            <br />
             <div>
-                <label htmlFor="text">Text</label><br />
+                <label htmlFor="text">Text</label>
                 <textarea name="text" id="text" value={formVaue.text} onChange={(e) => dispatch({ type: "setText", payload: e.target.value })}></textarea>
             </div>
-            <br />
             <div>
-                <label htmlFor="rating">Rating</label><br />
+                <label htmlFor="rating">Rating</label>
                 <Counter value={formVaue.rating}
                     increment={() =>
                         dispatch({ type: 'setRating', payload: formVaue.rating + RATING_STEP })}
