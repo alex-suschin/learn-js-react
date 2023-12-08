@@ -1,15 +1,18 @@
 header {
-    background: rgb(47, 157, 120);
-    padding: 12px 24px;
-    border-bottom: 1px solid #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(47, 157, 120);
+	padding: 12px 24px;
+	border-bottom: 1px solid #fff;
 
-    h1 {
-        margin-bottom: 0;
-    }
+	h1 {
+		margin-bottom: 0;
+	}
 }
 
 .headerBtns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }

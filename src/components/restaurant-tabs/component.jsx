@@ -1,5 +1,5 @@
 import React from "react";
-import {RestaurantTab} from "../restaurant-tab/component";
+import { RestaurantTab } from "../restaurant-tab/component";
 import styles from "./styles.module.scss";
 
 export const RestaurantTabs = ({
@@ -10,7 +10,7 @@ export const RestaurantTabs = ({
 }) => {
 	return (
 		<div className={`${styles.restaurantTabs} ${restaurantTabsPosition}`}>
-			{restaurants.map(({name}, index) => (
+			{restaurants.map(({ name }, index) => (
 				<RestaurantTab
 					activeRestaurant={activeRestaurant}
 					key={name}
