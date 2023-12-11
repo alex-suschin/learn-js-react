@@ -1,8 +1,15 @@
-import React from 'react'
-import styles from './styles.module.scss'
+import React from "react";
+import styles from "./styles.module.scss";
+import Button from "../button/component";
 
 export const RestaurantTab = ({ title, onClick, activeRestaurant }) => {
-  return (
-    <button className={`${styles.tab}  ${activeRestaurant.name === title ? styles.tabActive : ''}`} onClick={onClick}>{title}</button>
-  )
-}
+	return (
+		<Button
+			className={`${styles.tab}  ${
+				activeRestaurant.name === title ? styles.tabActive : ""
+			}`}
+			onClick={onClick}>
+			{title}
+		</Button>
+	);
+};
