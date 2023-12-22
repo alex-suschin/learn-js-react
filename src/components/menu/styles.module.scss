@@ -1,0 +1,14 @@
+.menu {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: stretch;
+	gap: 15px;
+}
+
+.dish {
+	padding: 8px;
+	border-radius: 8px;
+	width: 48%;
+	background: rgb(101, 0, 233);
+}
