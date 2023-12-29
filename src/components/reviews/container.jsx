@@ -1,11 +1,11 @@
 import React from "react";
 import Reviews from "./component";
 import { useSelector } from "react-redux";
-import { selectReviewIds } from "../../redux/features/entities/review/selectors";
+import { selectRestaurantReviewIds } from "../../redux/features/entities/restaurant/selectors";
 
 const ReviewsContainer = ({ restaurantId, ...props }) => {
 	const restaurantReviewIds = useSelector((state) =>
-		selectReviewIds(state, restaurantId)
+		selectRestaurantReviewIds(state, restaurantId)
 	);
 	console.log(restaurantReviewIds);
 	return <Reviews {...props} reviewIds={restaurantReviewIds} />;

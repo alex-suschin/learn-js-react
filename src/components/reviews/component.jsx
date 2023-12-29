@@ -8,7 +8,7 @@ const Reviews = ({ reviewIds }) => {
 			<h4>Отзывы:</h4>
 			<div className={styles.reviews}>
 				{reviewIds.map((id) => {
-					return <ReviewContainer key={id} rewiewId={id} />;
+					return <ReviewContainer key={id} reviewId={id} />;
 				})}
 			</div>
 		</>
