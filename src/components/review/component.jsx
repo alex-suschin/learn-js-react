@@ -1,11 +1,11 @@
-import React from 'react'
-import styles from './styles.module.scss'
+import React from "react";
+import styles from "./styles.module.scss";
 
-export const Review = ({ rewiew }) => {
+export const Review = ({ review, usersIds, userId }) => {
 	return (
-		<div className={styles.review} key={rewiew.id}>
-			<h4>Имя: {rewiew.user}</h4>
-			<p className={styles.reviewsText}>{rewiew.text}</p>
+		<div className={styles.review} key={review.id}>
+			<h4>Имя: {usersIds[userId].name}</h4>
+			<p className={styles.reviewsText}>{review.text}</p>
 		</div>
-	)
-}
+	);
+};
