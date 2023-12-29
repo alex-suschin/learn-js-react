@@ -5,7 +5,7 @@ import { RestaurantContainer } from "../../components/restaurant/container";
 import { RestaurantTabsContainer } from "../../components/restaurant-tabs/container";
 
 export const RestaurantsPage = () => {
-	const [activeRestaurantId, setActiveRestaurantId] = useState(0);
+	const [activeRestaurantId, setActiveRestaurantId] = useState(null);
 
 	return (
 		<Layout>

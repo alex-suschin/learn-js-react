@@ -5,15 +5,18 @@ import { Review } from "./component";
 import { selectUserById } from "../../redux/features/entities/user/selectors";
 
 const ReviewContainer = ({ reviewId, ...props }) => {
-	console.log("reviewId", reviewId);
-
 	const review = useSelector((state) => selectReviewById(state, reviewId));
-	const user = useSelector((state) => selectUserById(state, reviewId));
+	const usersIds = useSelector((state) => selectUserById(state, reviewId));
+	const userId = review.userId;
 
-	console.log(review);
-	console.log(user);
-
-	return <Review {...props} review={review} />;
+	return (
+		<Review
+			{...props}
+			review={review}
+			usersIds={usersIds}
+			userId={userId}
+		/>
+	);
 };
 
 export default ReviewContainer;

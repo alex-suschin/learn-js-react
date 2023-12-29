@@ -7,7 +7,6 @@ const ReviewsContainer = ({ restaurantId, ...props }) => {
 	const restaurantReviewIds = useSelector((state) =>
 		selectRestaurantReviewIds(state, restaurantId)
 	);
-	console.log(restaurantReviewIds);
 	return <Reviews {...props} reviewIds={restaurantReviewIds} />;
 };
 
